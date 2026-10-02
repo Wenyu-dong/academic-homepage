@@ -400,6 +400,86 @@ p:last-child{margin-bottom:0}
   }
 }
 
+
+.timeline-list{
+  position:relative;
+  display:grid;
+  gap:14px;
+  margin:2px 0 0 0;
+  padding:0 0 0 18px;
+}
+.timeline-list:before{
+  content:"";
+  position:absolute;
+  left:4px;
+  top:8px;
+  bottom:8px;
+  width:1px;
+  background:#dfe5ea;
+}
+.timeline-item{
+  position:relative;
+  display:grid;
+  grid-template-columns:92px minmax(0,1fr);
+  column-gap:14px;
+  align-items:start;
+}
+.timeline-item:before{
+  content:"";
+  position:absolute;
+  left:-18px;
+  top:7px;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 3px #fff;
+}
+.timeline-date{
+  color:#728093;
+  font-size:13px;
+  line-height:1.45;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+  padding-top:1px;
+}
+.timeline-content{
+  min-width:0;
+}
+.timeline-title{
+  color:var(--ink);
+  font-size:15px;
+  line-height:1.38;
+  font-weight:700;
+  margin:0;
+}
+.timeline-sub{
+  margin-top:2px;
+  color:var(--muted);
+  font-size:13.8px;
+  line-height:1.42;
+}
+.timeline-extra{
+  margin-top:1px;
+  color:#7b8796;
+  font-size:12.8px;
+  line-height:1.38;
+}
+.timeline-list.compact{
+  gap:12px;
+}
+@media(max-width:620px){
+  .timeline-item{
+    grid-template-columns:1fr;
+    row-gap:2px;
+  }
+  .timeline-date{
+    color:var(--accent);
+    font-size:12.5px;
+    font-weight:650;
+  }
+}
+
 footer{
   border-top:1px solid var(--line);
   padding:16px 0 24px;
@@ -504,52 +584,52 @@ footer{
 <p class="scholar-note">For citation metrics and the latest profile-maintained record, see <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=QRdtfDMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>.</p>
 </section>
 <section id="honors"><h2>Honors and Awards</h2>
-<div class="profile-list">
-  <div class="profile-item">
-    <div class="profile-main">
-      <div class="profile-title">Second Prize, Innovation and Entrepreneurship Award</div>
-      <div class="profile-sub">China Invention Association</div>
-      <div class="profile-extra" lang="zh-CN">中国发明协会创新创业奖二等奖</div>
+<div class="timeline-list compact">
+  <div class="timeline-item">
+    <div class="timeline-date">2025</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Outstanding Ph.D. Graduate</div>
+      <div class="timeline-sub">Beijing University of Posts and Telecommunications</div>
     </div>
-    <div class="profile-date">2023</div>
   </div>
-  <div class="profile-item">
-    <div class="profile-main">
-      <div class="profile-title">Outstanding Ph.D. Graduate</div>
-      <div class="profile-sub">Beijing University of Posts and Telecommunications</div>
+  <div class="timeline-item">
+    <div class="timeline-date">2025</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Outstanding Doctoral Dissertation</div>
+      <div class="timeline-sub">Beijing University of Posts and Telecommunications</div>
     </div>
-    <div class="profile-date">2025</div>
   </div>
-  <div class="profile-item">
-    <div class="profile-main">
-      <div class="profile-title">Outstanding Doctoral Dissertation</div>
-      <div class="profile-sub">Beijing University of Posts and Telecommunications</div>
+  <div class="timeline-item">
+    <div class="timeline-date">2023</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Second Prize, Innovation and Entrepreneurship Award</div>
+      <div class="timeline-sub">China Invention Association</div>
+      <div class="timeline-extra" lang="zh-CN">中国发明协会创新创业奖二等奖</div>
     </div>
-    <div class="profile-date">2025</div>
   </div>
 </div></section>
 <section id="education"><h2>Education &amp; Experience</h2>
-<div class="profile-list">
-  <div class="profile-item">
-    <div class="profile-main">
-      <div class="profile-title">Researcher</div>
-      <div class="profile-sub">Future Technology Research Center, China Telecom Research Institute</div>
+<div class="timeline-list">
+  <div class="timeline-item">
+    <div class="timeline-date">2025–Present</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Researcher</div>
+      <div class="timeline-sub">Future Technology Research Center, China Telecom Research Institute</div>
     </div>
-    <div class="profile-date">2025–Present</div>
   </div>
-  <div class="profile-item">
-    <div class="profile-main">
-      <div class="profile-title">Ph.D. in Information and Communication Engineering</div>
-      <div class="profile-sub">Beijing University of Posts and Telecommunications (BUPT)</div>
+  <div class="timeline-item">
+    <div class="timeline-date">2020–2025</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Ph.D. in Information and Communication Engineering</div>
+      <div class="timeline-sub">Beijing University of Posts and Telecommunications (BUPT)</div>
     </div>
-    <div class="profile-date">2020–2025</div>
   </div>
-  <div class="profile-item">
-    <div class="profile-main">
-      <div class="profile-title">B.S. in Electronic and Information Engineering</div>
-      <div class="profile-sub">Sichuan University (SCU)</div>
+  <div class="timeline-item">
+    <div class="timeline-date">2015–2019</div>
+    <div class="timeline-content">
+      <div class="timeline-title">B.S. in Electronic and Information Engineering</div>
+      <div class="timeline-sub">Sichuan University (SCU)</div>
     </div>
-    <div class="profile-date">2015–2019</div>
   </div>
 </div></section>
 </div></main>
