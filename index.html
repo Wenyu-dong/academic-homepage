@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Wen-Yu Dong (董文宇) — academic homepage, research interests, and publications.">
+<meta name="author" content="Wen-Yu Dong">
+<title>Wen-Yu Dong | Academic Homepage</title>
+<style>
+:root{
+  color-scheme:light;
+  --ink:#202a35;
+  --muted:#5f6c7d;
+  --light:#8793a1;
+  --line:#e5e9ee;
+  --link:#245a88;
+  --accent:#2f796f;
+  --accent-dark:#23675f;
+  --accent-soft:#f1f7f5;
+  --surface:#f8fafb;
+  --width:1080px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{
+  margin:0;
+  background:#fff;
+  color:var(--ink);
+  font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility
+}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.page{width:min(var(--width),calc(100% - 48px));margin:0 auto}
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  border-bottom:1px solid rgba(229,233,238,.95);
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(10px)
+}
+.topbar{
+  min-height:62px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px
+}
+.site-name{
+  color:var(--ink);
+  font-size:15px;
+  font-weight:750;
+  letter-spacing:-.1px
+}
+nav{display:flex;flex-wrap:wrap;gap:24px}
+nav a{
+  color:#48576a;
+  font-size:14px;
+  font-weight:500
+}
+nav a:hover{color:var(--ink);text-decoration:none}
+
+main{
+  display:grid;
+  grid-template-columns:250px minmax(0,1fr);
+  gap:62px;
+  padding-top:40px;
+  padding-bottom:38px
+}
+aside{align-self:start;position:sticky;top:92px}
+.profile-photo{
+  display:block;
+  width:170px;
+  height:218px;
+  object-fit:cover;
+  object-position:center 28%;
+  border:1px solid var(--line);
+  border-radius:8px;
+  margin:0 0 20px;
+  box-shadow:0 5px 18px rgba(31,41,55,.06)
+}
+aside h1{
+  margin:0 0 2px;
+  font-size:29px;
+  line-height:1.18;
+  letter-spacing:-.7px;
+  font-weight:800
+}
+.chinese-name{
+  margin:0 0 18px;
+  color:#536173;
+  font-size:18px;
+  line-height:1.35;
+  font-weight:700
+}
+.profile-role{
+  margin:0 0 2px;
+  color:var(--ink);
+  font-size:15px;
+  line-height:1.55;
+  font-weight:700
+}
+.profile-affiliation{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.58
+}
+.memberships{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:13px 0 18px
+}
+.membership-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:3px 8px;
+  border:1px solid #d7e6e2;
+  border-radius:999px;
+  background:var(--accent-soft);
+  color:var(--accent-dark);
+  font-size:12px;
+  line-height:1.45;
+  font-weight:650
+}
+.profile-links{
+  display:grid;
+  gap:7px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  font-size:13.5px;
+  overflow-wrap:anywhere
+}
+.profile-links a:first-child{font-weight:650}
+.academic-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 16px;
+  margin-top:13px;
+  font-size:13.5px;
+  font-weight:600
+}
+.icon-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px
+}
+.brand-icon{
+  width:16px;
+  height:16px;
+  flex:0 0 16px;
+  object-fit:contain
+}
+.mail-link{
+  display:flex !important;
+  align-items:center;
+  gap:7px
+}
+.mail-icon{
+  width:15px;
+  height:15px;
+  flex:0 0 15px;
+  stroke:currentColor
+}
+
+.content{min-width:0}
+.content section{
+  padding:0 0 31px;
+  margin:0 0 30px;
+  border-bottom:1px solid var(--line)
+}
+.content section:last-child{margin-bottom:0}
+h2{
+  margin:0 0 15px;
+  color:var(--ink);
+  font-size:21px;
+  line-height:1.35;
+  font-weight:760;
+  letter-spacing:-.25px
+}
+h2:before{
+  content:"";
+  display:inline-block;
+  width:3px;
+  height:18px;
+  margin:0 11px -2px 0;
+  border-radius:3px;
+  background:var(--accent)
+}
+p{margin:0 0 13px}
+p:last-child{margin-bottom:0}
+
+.interest-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px
+}
+.interest-tag{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:var(--surface);
+  color:#48576a;
+  font-size:13.5px;
+  line-height:1.45
+}
+
+.education-list,.award-list{list-style:none;padding:0;margin:0}
+.education-list li,.award-list li{margin:0 0 14px}
+.education-list li:last-child,.award-list li:last-child{margin-bottom:0}
+.date{
+  display:inline-block;
+  min-width:106px;
+  color:var(--muted);
+  font-variant-numeric:tabular-nums
+}
+.degree,.award-name{font-weight:700}
+.institution,.award-zh{color:var(--muted)}
+.award-zh{font-size:14px}
+
+.pub-intro{margin:0 0 16px;color:var(--muted);font-size:14px}
+.pub-controls{
+  display:grid;
+  gap:11px;
+  margin-top:4px;
+  padding:12px 13px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--surface)
+}
+.control-line{
+  display:grid;
+  grid-template-columns:90px minmax(0,1fr);
+  align-items:start;
+  gap:8px
+}
+.control-label{
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:31px
+}
+.button-row{display:flex;flex-wrap:wrap;gap:7px}
+.filter-button{
+  border:1px solid #dce3e9;
+  border-radius:6px;
+  background:#fff;
+  color:#465568;
+  padding:5px 9px;
+  font:inherit;
+  font-size:13px;
+  line-height:1.4;
+  cursor:pointer;
+  transition:border-color .15s ease,background .15s ease,color .15s ease
+}
+.filter-button:hover{border-color:#c4d2d0;background:#fbfdfc}
+.filter-button[aria-selected="true"],.filter-button[aria-pressed="true"]{
+  border-color:#b8d4cf;
+  background:var(--accent-soft);
+  color:#24645c;
+  font-weight:700
+}
+.result-count{margin:13px 0 3px;color:var(--muted);font-size:13px}
+.publication-year{
+  margin:24px 0 8px;
+  padding-bottom:5px;
+  border-bottom:1px solid var(--line);
+  color:var(--accent);
+  font-size:17px;
+  font-weight:760
+}
+.publication-kind{
+  margin:9px 0 3px;
+  color:var(--ink);
+  font-size:14px;
+  font-weight:720;
+  letter-spacing:.01em
+}
+.paper-list{list-style:none;padding:0;margin:0}
+.paper{position:relative;padding:4px 0 5px 18px}
+.paper:before{
+  content:"•";
+  position:absolute;
+  left:1px;
+  top:5px;
+  color:#8a96a5
+}
+.paper-title{
+  display:inline-block;
+  color:var(--link);
+  font-weight:650;
+  line-height:1.34
+}
+.paper-meta{
+  margin-top:0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.38
+}
+.venue{
+  margin-top:0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.39
+}
+.venue-name{color:#465363}
+.venue-tags{
+  display:inline-flex;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-left:7px;
+  vertical-align:1px
+}
+.venue-tag{
+  display:inline-flex;
+  align-items:center;
+  padding:1px 6px;
+  border:1px solid #dfe5ea;
+  border-radius:999px;
+  background:#fafbfc;
+  color:#596777;
+  font-size:11.5px;
+  line-height:1.55;
+  font-style:normal;
+  font-weight:600;
+  white-space:nowrap
+}
+.venue-tag.flagship{
+  border-color:#cfe1dd;
+  background:var(--accent-soft);
+  color:var(--accent-dark)
+}
+.no-results{padding:15px 0;color:var(--muted)}
+.scholar-note{margin-top:16px;color:var(--muted);font-size:14px}
+
+
+.profile-list{
+  display:grid;
+  gap:0;
+  margin:0;
+}
+.profile-item{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:8px 20px;
+  padding:11px 0 12px;
+  border-top:1px solid #edf0f3;
+}
+.profile-item:first-child{
+  padding-top:2px;
+  border-top:0;
+}
+.profile-main{
+  min-width:0;
+}
+.profile-title{
+  color:var(--ink);
+  font-size:15.5px;
+  line-height:1.42;
+  font-weight:700;
+}
+.profile-sub{
+  margin-top:2px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.48;
+}
+.profile-extra{
+  margin-top:1px;
+  color:#748092;
+  font-size:13px;
+  line-height:1.42;
+}
+.profile-date{
+  padding-top:1px;
+  color:#7a8797;
+  font-size:13.5px;
+  line-height:1.45;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+@media(max-width:620px){
+  .profile-item{
+    grid-template-columns:1fr;
+    gap:2px;
+  }
+  .profile-date{
+    grid-row:1;
+    color:var(--accent);
+    font-size:12.5px;
+    font-weight:650;
+  }
+}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:16px 0 24px;
+  color:var(--light);
+  font-size:13px
+}
+
+@media(max-width:760px){
+  .page{width:min(var(--width),calc(100% - 32px))}
+  .topbar{
+    align-items:flex-start;
+    flex-direction:column;
+    justify-content:center;
+    padding:12px 0;
+    gap:7px
+  }
+  nav{gap:8px 17px}
+  main{grid-template-columns:1fr;gap:28px;padding-top:28px}
+  aside{
+    position:static;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--line)
+  }
+  .profile-photo{width:148px;height:192px}
+  .profile-links{max-width:420px}
+  .academic-links{margin-top:11px}
+  .content section{padding-bottom:24px;margin-bottom:23px}
+  .date{display:block;min-width:0}
+  .control-line{grid-template-columns:1fr;gap:2px}
+  .control-label{line-height:1.4;margin-bottom:3px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="page topbar"><a class="site-name" href="#home">Wen-Yu Dong</a><nav aria-label="Main navigation"><a href="#about">Biography</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#honors">Honors</a><a href="#education">Education</a></nav></div></header>
+<main class="page" id="home">
+<aside aria-label="Profile">
+<img class="profile-photo" src="./profile.png" alt="Portrait of Wen-Yu Dong">
+<h1>Wen-Yu Dong</h1>
+<p class="chinese-name" lang="zh-CN">董文宇</p>
+<p class="profile-role">Researcher</p>
+<p class="profile-affiliation">Future Technology Research Center<br>China Telecom Research Institute</p>
+<div class="memberships" aria-label="Professional memberships">
+  <span class="membership-badge">IEEE Member</span>
+  <span class="membership-badge">CCF Member</span>
+</div>
+<div class="profile-links">
+  <a class="mail-link" href="mailto:dongwy@chinatelecom.cn">
+    <svg class="mail-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5.5h18v13H3z" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke-width="1.7"/></svg>
+    <span>dongwy@chinatelecom.cn</span>
+  </a>
+  <a class="mail-link" href="mailto:wenyu.dong@bupt.edu.cn">
+    <svg class="mail-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5.5h18v13H3z" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke-width="1.7"/></svg>
+    <span>wenyu.dong@bupt.edu.cn</span>
+  </a>
+</div>
+<div class="academic-links">
+  <a class="icon-link" href="https://scholar.google.com/citations?hl=zh-CN&amp;user=QRdtfDMAAAAJ" target="_blank" rel="noopener noreferrer">
+    <img class="brand-icon" src="https://cdn.simpleicons.org/googlescholar/4285F4" alt="" aria-hidden="true">
+    <span>Google Scholar ↗</span>
+  </a>
+  <a class="icon-link" href="https://orcid.org/0000-0003-1248-4850" target="_blank" rel="me noopener noreferrer">
+    <img class="brand-icon" src="https://cdn.simpleicons.org/orcid/A6CE39" alt="" aria-hidden="true">
+    <span>ORCID ↗</span>
+  </a>
+  <a class="icon-link" href="https://ieeexplore.ieee.org/author/829651794820787" target="_blank" rel="noopener noreferrer">
+    <img class="brand-icon" src="https://cdn.simpleicons.org/ieee/00629B" alt="" aria-hidden="true">
+    <span>IEEE Xplore ↗</span>
+  </a>
+</div>
+</aside>
+<div class="content">
+<section id="about"><h2>Biography</h2>
+<p><strong>Wen-Yu Dong</strong> received the B.S. degree in Electronic and Information Engineering from Sichuan University, Chengdu, China, in 2019, and the Ph.D. degree in Information and Communication Engineering from Beijing University of Posts and Telecommunications (BUPT), Beijing, China, in 2025. He is currently a Researcher with the Future Technology Research Center, China Telecom Research Institute, Beijing, China.</p>
+<p>His research interests include <strong>fluid-spatiotemporal stochastic geometry (F-STSG)</strong>, 6G network modeling and optimization, integrated space–air–ground–sea and low-altitude networks, and wireless communications.</p>
+<p>He serves as a reviewer for several IEEE journals, including <em>IEEE JSAC</em>, <em>JSTSP</em>, <em>TWC</em>, <em>TCOM</em>, <em>TVT</em>, <em>TMC</em>, <em>IoTJ</em>, and <em>VTM</em>.</p></section>
+<section id="research"><h2>Research Interests</h2>
+<div class="interest-tags" aria-label="Research interests">
+  <span class="interest-tag">Fluid-Spatiotemporal Stochastic Geometry (F-STSG)</span>
+  <span class="interest-tag">6G Network Modeling &amp; Optimization</span>
+  <span class="interest-tag">Space–Air–Ground–Sea &amp; Low-Altitude Networks</span>
+  <span class="interest-tag">Integrated Sensing and Communication (ISAC)</span>
+  <span class="interest-tag">Computing &amp; Edge Networks</span>
+  <span class="interest-tag">Network Traffic Modeling &amp; Prediction</span>
+</div></section>
+<section id="publications"><h2>Publications</h2>
+<div class="pub-controls">
+<div class="control-line"><span class="control-label">View</span><div class="button-row" role="tablist" aria-label="Publication view">
+<button class="filter-button" type="button" role="tab" data-view="timeline" aria-selected="true">Timeline</button>
+<button class="filter-button" type="button" role="tab" data-view="sagin" aria-selected="false">Space–Air–Ground–Sea &amp; Stochastic Geometry</button>
+<button class="filter-button" type="button" role="tab" data-view="fstsg" aria-selected="false">F-STSG Framework</button>
+<button class="filter-button" type="button" role="tab" data-view="lowalt" aria-selected="false">Low-Altitude, FANET &amp; ISAC</button>
+</div></div>
+<div class="control-line"><span class="control-label">Authorship</span><div class="button-row" role="group" aria-label="Filter by authorship">
+<button class="filter-button" type="button" data-author="all" aria-pressed="true">All</button>
+<button class="filter-button" type="button" data-author="first" aria-pressed="false">First author</button>
+<button class="filter-button" type="button" data-author="coauthor" aria-pressed="false">Co-author</button>
+</div></div>
+</div>
+<p id="result-count" class="result-count" aria-live="polite"></p><div id="publication-list"></div>
+<p class="scholar-note">For citation metrics and the latest profile-maintained record, see <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=QRdtfDMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>.</p>
+</section>
+<section id="honors"><h2>Honors and Awards</h2>
+<div class="profile-list">
+  <div class="profile-item">
+    <div class="profile-main">
+      <div class="profile-title">Second Prize, Innovation and Entrepreneurship Award</div>
+      <div class="profile-sub">China Invention Association</div>
+      <div class="profile-extra" lang="zh-CN">中国发明协会创新创业奖二等奖</div>
+    </div>
+    <div class="profile-date">2023</div>
+  </div>
+  <div class="profile-item">
+    <div class="profile-main">
+      <div class="profile-title">Outstanding Ph.D. Graduate</div>
+      <div class="profile-sub">Beijing University of Posts and Telecommunications</div>
+    </div>
+    <div class="profile-date">2025</div>
+  </div>
+  <div class="profile-item">
+    <div class="profile-main">
+      <div class="profile-title">Outstanding Doctoral Dissertation</div>
+      <div class="profile-sub">Beijing University of Posts and Telecommunications</div>
+    </div>
+    <div class="profile-date">2025</div>
+  </div>
+</div></section>
+<section id="education"><h2>Education</h2>
+<div class="profile-list">
+  <div class="profile-item">
+    <div class="profile-main">
+      <div class="profile-title">Ph.D. in Information and Communication Engineering</div>
+      <div class="profile-sub">Beijing University of Posts and Telecommunications (BUPT)</div>
+    </div>
+    <div class="profile-date">2020–2025</div>
+  </div>
+  <div class="profile-item">
+    <div class="profile-main">
+      <div class="profile-title">B.S. in Electronic and Information Engineering</div>
+      <div class="profile-sub">Sichuan University (SCU)</div>
+    </div>
+    <div class="profile-date">2015–2019</div>
+  </div>
+</div></section>
+</div></main>
+<footer><div class="page"><strong>Wen-Yu Dong · 董文宇</strong></div></footer>
+<script>
+const publications = [
+  {year:2026,title:"A Hierarchical Network Coding Method for Critical Data Recovery in LEO Satellite Handover Windows",href:"https://doi.org/10.1109/JIOT.2026.3729655",authors:["Y. Lu","Q. Yu","W. Jiang","Wen-Yu Dong","Z. Wang","A. Kaushik"],venue:"IEEE Internet of Things Journal",details:"IEEE IoTJ, Early Access, Sep. 2026",ratings:["CCF-C"],topics:["sagin"]},
+  {year:2026,title:"Proper Sea-Surface Roughness Enhances the Performance of Near-Shore Maritime Networks",href:"https://doi.org/10.1109/TCOMM.2026.3726762",authors:["Wen-Yu Dong","Shaoshi Yang","Song Zhao","Jinyang Yu","Weiliang Xie","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE Transactions on Communications",details:"IEEE TCOM, vol. 74, pp. 13514–13530, Sep. 2026",ratings:["CCF-B"],topics:["sagin"]},
+  {year:2026,title:"Fluid-Dynamic Interference Modeling for LEO Mega-Constellations: A Spatiotemporal Kinetic Field Approach",href:"https://arxiv.org/abs/2608.20651",authors:["Wen-Yu Dong","Weiwei Jiang","Song Zhao","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE Global Communications Conference (GLOBECOM 2026)",details:"Macau, China, Dec. 7–11, 2026 · arXiv:2608.20651",ratings:["IEEE ComSoc Flagship"],topics:["fstsg"],publicationType:"conference"},
+  {year:2026,title:"Integrated Communication and Sensing Waveform in Low-Altitude Wireless Network",href:"https://doi.org/10.1109/MCOMSTD.2025.3650080",authors:["Xue Ding","Yuanhao Cui","Wen-Yu Dong","Yuan Cheng","Yi Gong","Jinyang Yu","Xiaowen Cao","Marco Di Renzo"],venue:"IEEE Communications Standards Magazine",details:"vol. 10, no. 2, pp. 140–149, Jun. 2026",ratings:[],topics:["lowalt"]},
+  {year:2026,title:"Digital Tides: A Fluid-Dynamic Framework for Flux-Aware Infrastructure Provisioning in UAV Logistics Networks",href:"https://doi.org/10.1109/TMC.2026.3688690",authors:["Wen-Yu Dong","Song Zhao","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE Transactions on Mobile Computing",details:"IEEE TMC, vol. 25, no. 10, pp. 16705–16720, Oct. 2026",ratings:["CCF-A"],topics:["fstsg","lowalt"]},
+  {year:2026,title:"Vorticity Dissipation Based Routing: A Fluid-Kinetic Framework for Loop-Free Transport in Ultra-Dense Networks",href:"https://doi.org/10.1109/TMC.2026.3722828",authors:["Wen-Yu Dong","Weiwei Jiang","Song Zhao","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE Transactions on Mobile Computing",details:"IEEE TMC, Early Access, Aug. 2026",ratings:["CCF-A"],topics:["fstsg"]},
+  {year:2026,title:"Coverage Probability Density: A Spatially-Resolved Performance Analysis for Non-Homogeneous Maritime Networks",href:"https://doi.org/10.1109/ICC59461.2026.11586885",authors:["Wen-Yu Dong","Shaoshi Yang","Jinyang Yu","Song Zhao","Weiliang Xie","Junwei Hou","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE International Conference on Communications (ICC 2026)",details:"Glasgow, UK, May 24–28, 2026, pp. 1–6",ratings:["IEEE ComSoc Flagship"],topics:["sagin"]},
+  {year:2026,title:"Fluid-Spatiotemporal Stochastic Geometry: Information Flow in Non-Stationary Fields",href:"https://arxiv.org/abs/2607.00616",authors:["Wen-Yu Dong","Weiwei Jiang","Song Zhao","Qi Bi","Sheng Chen"],venue:"arXiv preprint",details:"arXiv:2607.00616, Jul. 2026",ratings:[],topics:["fstsg"],publicationType:"journal"},
+  {year:2025,title:"Betweenness Centrality Based Dynamic Source Routing for Flying Ad Hoc Networks in Marching Formation",href:"https://doi.org/10.1109/TVT.2025.3550336",authors:["Shaoshi Yang","Wei Zhao","Chu-Meng Wang","Wen-Yu Dong","Xiaojie Ju"],venue:"IEEE Transactions on Vehicular Technology",details:"IEEE TVT, vol. 74, no. 8, pp. 12791–12798, Aug. 2025",ratings:[],topics:["lowalt"]},
+  {year:2025,title:"Uplink Performance Analysis of Heterogeneous Non-Terrestrial Networks in Harsh Environments: A Novel Stochastic Geometry Model",href:"https://doi.org/10.1109/TCOMM.2025.3529266",authors:["Wen-Yu Dong","Shaoshi Yang","Sheng Chen"],venue:"IEEE Transactions on Communications",details:"IEEE TCOM, vol. 73, no. 8, pp. 6734–6747, Aug. 2025",ratings:["CCF-B"],topics:["sagin"]},
+  {year:2025,title:"A Distributed Hybrid Proactive-Reactive Ant Colony Routing Protocol for Highly Dynamic FANETs With Link Quality Prediction",href:"https://doi.org/10.1109/TVT.2024.3463195",authors:["Chu-Meng Wang","Shaoshi Yang","Wen-Yu Dong","Wei Zhao","Wei Lin"],venue:"IEEE Transactions on Vehicular Technology",details:"IEEE TVT, vol. 74, no. 1, pp. 1817–1822, Jan. 2025",ratings:[],topics:["lowalt"]},
+  {year:2025,title:"Modeling and Performance Analysis of IoT-over-LEO Satellite Systems Under Realistic Operational Constraints: A Stochastic Geometry Approach",href:"https://doi.org/10.1109/JIOT.2025.3570843",authors:["Wen-Yu Dong","Shaoshi Yang","Ping Zhang","Sheng Chen"],venue:"IEEE Internet of Things Journal",details:"IEEE IoTJ, vol. 12, no. 15, pp. 30576–30593, Aug. 2025",ratings:["CCF-C"],topics:["sagin"]},
+  {year:2025,title:"Low-Altitude Sensing Model: Analysis Leveraging ISAC in Real-World Environments",href:"https://doi.org/10.3390/drones9040283",authors:["Xiao Li","Xue Ding","Weiliang Xie","Wenbo Wang","Jinyang Yu","Wen-Yu Dong"],venue:"Drones",details:"vol. 9, no. 4, Art. no. 283, Apr. 2025",ratings:[],topics:["lowalt"]},
+  {year:2024,title:"Stochastic Geometry Based Modeling and Analysis of Uplink Cooperative Satellite-Aerial-Terrestrial Networks for Nomadic Communications With Weak Satellite Coverage",href:"https://doi.org/10.1109/JSAC.2024.3459268",authors:["Wen-Yu Dong","Shaoshi Yang","Ping Zhang","Sheng Chen"],venue:"IEEE Journal on Selected Areas in Communications",details:"IEEE JSAC, vol. 42, no. 12, pp. 3428–3444, Dec. 2024",ratings:["CCF-A"],topics:["sagin"]},
+  {year:2024,title:"Stochastic Geometry Based Performance Analysis of Terrestrial-to-Aerial Networks for Nomadic Communications",href:"https://doi.org/10.1109/GLOBECOM52923.2024.10901009",authors:["Wen-Yu Dong","Shaoshi Yang","Wei Lin","Wei Zhao","Jia-Xing Gui","Ping Zhang","Sheng Chen"],venue:"IEEE Global Communications Conference (GLOBECOM 2024)",details:"Cape Town, South Africa, Dec. 8–12, 2024, pp. 2731–2736",ratings:["IEEE ComSoc Flagship"],topics:["sagin"]},
+  {year:2024,title:"Outage Probability Analysis of Uplink Heterogeneous Non-terrestrial Networks: A Novel Stochastic Geometry Model",href:"https://doi.org/10.1109/GLOBECOM52923.2024.10901355",authors:["Wen-Yu Dong","Shaoshi Yang","Wei Lin","Wei Zhao","Jia-Xing Gui","Sheng Chen"],venue:"IEEE Global Communications Conference (GLOBECOM 2024)",details:"Cape Town, South Africa, Dec. 8–12, 2024, pp. 2593–2598",ratings:["IEEE ComSoc Flagship"],topics:["sagin"]}
+];
+let activeView="timeline";
+let activeAuthor="all";
+const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+const venueAbbreviations = {
+  "IEEE Transactions on Communications":"IEEE TCOM",
+  "IEEE Transactions on Mobile Computing":"IEEE TMC",
+  "IEEE Transactions on Vehicular Technology":"IEEE TVT",
+  "IEEE Internet of Things Journal":"IEEE IoTJ",
+  "IEEE Journal on Selected Areas in Communications":"IEEE JSAC"
+};
+const monthOrder={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Sept:9,Oct:10,Nov:11,Dec:12};
+const publicationMonth=p=>{
+  const match=(p.details||"").match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\b/);
+  return match?(monthOrder[match[1]]||0):0;
+};
+function renderPublications(){
+  const matches=publications.filter(p=>(activeView==="timeline"||p.topics.includes(activeView))&&(activeAuthor==="all"||(activeAuthor==="first"?p.authors[0]==="Wen-Yu Dong":p.authors[0]!=="Wen-Yu Dong"))).sort((a,b)=>b.year-a.year||publicationMonth(b)-publicationMonth(a)||a.title.localeCompare(b.title));
+  document.getElementById("result-count").textContent=`${matches.length} publication${matches.length===1?"":"s"}`;
+  const kindFor=p=>p.publicationType||(p.venue==="arXiv preprint"?"preprint":p.venue.startsWith("IEEE International Conference")||p.venue.startsWith("IEEE Global Communications Conference")?"conference":"journal");
+  const paperMarkup=p=>{const abbreviation=venueAbbreviations[p.venue];const details=(p.details||"").replace(/^IEEE (?:TCOM|TMC|TVT|IoTJ|JSAC),\s*/,"");const tags=p.ratings.length?`<span class="venue-tags">${p.ratings.map(tag=>`<span class="venue-tag${tag==="IEEE ComSoc Flagship"?" flagship":""}">${escapeHtml(tag)}</span>`).join("")}</span>`:"";return `<li class="paper"><a class="paper-title" href="${escapeHtml(p.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a><div class="paper-meta">${p.authors.map(name=>name==="Wen-Yu Dong"?`<strong>${escapeHtml(name)}</strong>`:escapeHtml(name)).join(", ")}${p.authors.length>1?".":""}</div><div class="venue"><strong><em class="venue-name">${escapeHtml(p.venue)}</em></strong>${abbreviation?` (<strong><em>${escapeHtml(abbreviation)}</em></strong>)`:""}${details?(abbreviation?`, ${escapeHtml(details)}`:` · ${escapeHtml(details)}`):""}.${tags}</div></li>`};
+  const yearBlock=year=>{
+    const papers=matches.filter(p=>p.year===year);
+    const journals=papers.filter(p=>kindFor(p)==="journal");
+    const conferences=papers.filter(p=>kindFor(p)==="conference");
+    const section=(label,items)=>items.length?`<h4 class="publication-kind">${label}</h4><ul class="paper-list">${items.map(paperMarkup).join("")}</ul>`:"";
+    return `<h3 class="publication-year">${year}</h3>${section("Journals",journals)}${section("Conferences",conferences)}`;
+  };
+  const years=[...new Set(matches.map(p=>p.year))].sort((a,b)=>b-a);
+  document.getElementById("publication-list").innerHTML=matches.length?years.map(yearBlock).join(""):`<p class="no-results">No publications match these filters.</p>`;
+}
+document.querySelectorAll("[data-view]").forEach(button=>button.addEventListener("click",()=>{activeView=button.dataset.view;document.querySelectorAll("[data-view]").forEach(item=>item.setAttribute("aria-selected",String(item===button)));renderPublications()}));
+document.querySelectorAll("[data-author]").forEach(button=>button.addEventListener("click",()=>{activeAuthor=button.dataset.author;document.querySelectorAll("[data-author]").forEach(item=>item.setAttribute("aria-pressed",String(item===button)));renderPublications()}));
+renderPublications();
+</script>
+</body>
+</html>
