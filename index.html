@@ -555,8 +555,8 @@ footer{
 <div class="content">
 <section id="about"><h2>Biography</h2>
 <p><strong>Wen-Yu Dong</strong> received the B.S. degree in Electronic and Information Engineering from Sichuan University, Chengdu, China, in 2019, and the Ph.D. degree in Information and Communication Engineering from Beijing University of Posts and Telecommunications (BUPT), Beijing, China, in 2025. He is currently a Researcher with the Future Technology Research Center, China Telecom Research Institute, Beijing, China.</p>
-<p>His research interests include <strong>fluid-spatiotemporal stochastic geometry (F-STSG)</strong>, 6G network modeling and optimization, integrated space–air–ground–sea and low-altitude networks, and wireless communications.</p>
-<p>He serves as a reviewer for several IEEE journals, including <em>IEEE JSAC</em>, <em>JSTSP</em>, <em>TWC</em>, <em>TCOM</em>, <em>TVT</em>, <em>TMC</em>, <em>IoTJ</em>, and <em>VTM</em>.</p></section>
+<p>His research focuses on 6G network modeling and optimization, stochastic geometry, integrated space–air–ground–sea and low-altitude networks, and wireless communications. He proposed the <strong>fluid-spatiotemporal stochastic geometry (F-STSG)</strong> framework, which extends conventional spatial network modeling toward non-stationary systems by characterizing evolving spatial fields, transport dynamics, and information flow. He is further developing the theoretical foundations and extensions of F-STSG, with a growing series of works spanning its theory, methodology, and applications. <a id="fstsg-series-link" href="#publications"><strong>F-STSG publication series →</strong></a></p>
+<p>He serves as a reviewer for several IEEE journals, including <em>IEEE JSAC</em>, <em>JSTSP</em>, <em>TWC</em>, <em>TCOM</em>, <em>TVT</em>, <em>TMC</em>, <em>IoTJ</em>, and <em>VTM</em>, among others.</p>
 <section id="research"><h2>Research Interests</h2>
 <div class="interest-tags" aria-label="Research interests">
   <span class="interest-tag">Fluid-Spatiotemporal Stochastic Geometry (F-STSG)</span>
@@ -686,6 +686,14 @@ function renderPublications(){
 }
 document.querySelectorAll("[data-view]").forEach(button=>button.addEventListener("click",()=>{activeView=button.dataset.view;document.querySelectorAll("[data-view]").forEach(item=>item.setAttribute("aria-selected",String(item===button)));renderPublications()}));
 document.querySelectorAll("[data-author]").forEach(button=>button.addEventListener("click",()=>{activeAuthor=button.dataset.author;document.querySelectorAll("[data-author]").forEach(item=>item.setAttribute("aria-pressed",String(item===button)));renderPublications()}));
+const fstsgSeriesLink=document.getElementById("fstsg-series-link");
+if(fstsgSeriesLink){
+  fstsgSeriesLink.addEventListener("click",()=>{
+    activeView="fstsg";
+    document.querySelectorAll("[data-view]").forEach(item=>item.setAttribute("aria-selected",String(item.dataset.view==="fstsg")));
+    renderPublications();
+  });
+}
 renderPublications();
 </script>
 </body>
