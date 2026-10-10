@@ -299,6 +299,7 @@ p:last-child{margin-bottom:0}
   font-weight:650;
   line-height:1.34
 }
+.paper-title-unlinked{color:var(--ink)}
 .paper-meta{
   margin-top:0;
   color:var(--muted);
@@ -643,6 +644,7 @@ footer{
 <footer><div class="page"><strong>Wen-Yu Dong · 董文宇</strong></div></footer>
 <script>
 const publications = [
+  {year:2026,title:"Flux-Divergence-Based Short-Horizon Demand Topology Prediction in Non-Stationary Wireless Networks",href:null,authors:["Wen-Yu Dong","Sheng Chen"],venue:"IEEE Transactions on Mobile Computing",details:"IEEE TMC, Accepted",ratings:[],topics:["fstsg"],publicationType:"journal",sortMonth:10},
   {year:2026,title:"A Hierarchical Network Coding Method for Critical Data Recovery in LEO Satellite Handover Windows",href:"https://doi.org/10.1109/JIOT.2026.3729655",authors:["Y. Lu","Q. Yu","W. Jiang","Wen-Yu Dong","Z. Wang","A. Kaushik"],venue:"IEEE Internet of Things Journal",details:"IEEE IoTJ, Early Access, Sep. 2026",ratings:[],topics:["sagin"]},
   {year:2026,title:"Proper Sea-Surface Roughness Enhances the Performance of Near-Shore Maritime Networks",href:"https://doi.org/10.1109/TCOMM.2026.3726762",authors:["Wen-Yu Dong","Shaoshi Yang","Song Zhao","Jinyang Yu","Weiliang Xie","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE Transactions on Communications",details:"IEEE TCOM, vol. 74, pp. 13514–13530, Sep. 2026",ratings:[],topics:["sagin"]},
   {year:2026,title:"Fluid-Dynamic Interference Modeling for LEO Mega-Constellations: A Spatiotemporal Kinetic Field Approach",href:"https://arxiv.org/abs/2608.20651",authors:["Wen-Yu Dong","Weiwei Jiang","Song Zhao","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE Global Communications Conference (GLOBECOM 2026)",details:"Macau, China, Dec. 7–11, 2026 · Accepted · arXiv:2608.20651",ratings:[],topics:["fstsg"],publicationType:"conference"},
@@ -651,7 +653,8 @@ const publications = [
   {year:2026,title:"Digital Tides: A Fluid-Dynamic Framework for Flux-Aware Infrastructure Provisioning in UAV Logistics Networks",href:"https://doi.org/10.1109/TMC.2026.3688690",authors:["Wen-Yu Dong","Song Zhao","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE Transactions on Mobile Computing",details:"IEEE TMC, vol. 25, no. 10, pp. 16705–16720, Oct. 2026",ratings:[],topics:["fstsg","lowalt"]},
   {year:2026,title:"Vorticity Dissipation Based Routing: A Fluid-Kinetic Framework for Loop-Free Transport in Ultra-Dense Networks",href:"https://doi.org/10.1109/TMC.2026.3722828",authors:["Wen-Yu Dong","Weiwei Jiang","Song Zhao","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE Transactions on Mobile Computing",details:"IEEE TMC, vol. 25, no. 11, pp. 22370–22387, Nov. 2026",ratings:[],topics:["fstsg"]},
   {year:2026,title:"Coverage Probability Density: A Spatially-Resolved Performance Analysis for Non-Homogeneous Maritime Networks",href:"https://doi.org/10.1109/ICC59461.2026.11586885",authors:["Wen-Yu Dong","Shaoshi Yang","Jinyang Yu","Song Zhao","Weiliang Xie","Junwei Hou","Rui-Si Han","Qi Bi","Sheng Chen"],venue:"IEEE International Conference on Communications (ICC 2026)",details:"Glasgow, UK, May 24–28, 2026, pp. 1–6",ratings:[],topics:["sagin"]},
-  {year:2026,title:"Fluid-Spatiotemporal Stochastic Geometry: Information Flow in Non-Stationary Fields",href:"https://arxiv.org/abs/2607.00616",authors:["Wen-Yu Dong","Weiwei Jiang","Song Zhao","Qi Bi","Sheng Chen"],venue:"arXiv preprint",details:"arXiv:2607.00616, Jul. 2026",ratings:[],topics:["fstsg"],publicationType:"journal"},
+  {year:2026,title:"Fluid-Spatiotemporal Stochastic Geometry for Information Flow in Non-Stationary Fields — Part I: Kinematics and Field Reconstruction",href:null,authors:["Wen-Yu Dong","Weiwei Jiang","Song Zhao","Qi Bi","Sheng Chen"],venue:"IEEE Internet of Things Journal",details:"IEEE IoTJ, Accepted",ratings:[],topics:["fstsg"],publicationType:"journal",sortMonth:10},
+  {year:2026,title:"Fluid-Spatiotemporal Stochastic Geometry: Information Flow in Non-Stationary Fields",href:"https://arxiv.org/abs/2607.00616",authors:["Wen-Yu Dong","Weiwei Jiang","Song Zhao","Qi Bi","Sheng Chen"],venue:"arXiv preprint",details:"arXiv:2607.00616, Jul. 2026 · Full-length preprint (25 pages)",ratings:[],topics:["fstsg"],publicationType:"preprint",sortMonth:7},
   {year:2025,title:"Betweenness Centrality Based Dynamic Source Routing for Flying Ad Hoc Networks in Marching Formation",href:"https://doi.org/10.1109/TVT.2025.3550336",authors:["Shaoshi Yang","Wei Zhao","Chu-Meng Wang","Wen-Yu Dong","Xiaojie Ju"],venue:"IEEE Transactions on Vehicular Technology",details:"IEEE TVT, vol. 74, no. 8, pp. 12791–12798, Aug. 2025",ratings:[],topics:["lowalt"]},
   {year:2025,title:"Uplink Performance Analysis of Heterogeneous Non-Terrestrial Networks in Harsh Environments: A Novel Stochastic Geometry Model",href:"https://doi.org/10.1109/TCOMM.2025.3529266",authors:["Wen-Yu Dong","Shaoshi Yang","Sheng Chen"],venue:"IEEE Transactions on Communications",details:"IEEE TCOM, vol. 73, no. 8, pp. 6734–6747, Aug. 2025",ratings:[],topics:["sagin"]},
   {year:2025,title:"A Distributed Hybrid Proactive-Reactive Ant Colony Routing Protocol for Highly Dynamic FANETs With Link Quality Prediction",href:"https://doi.org/10.1109/TVT.2024.3463195",authors:["Chu-Meng Wang","Shaoshi Yang","Wen-Yu Dong","Wei Zhao","Wei Lin"],venue:"IEEE Transactions on Vehicular Technology",details:"IEEE TVT, vol. 74, no. 1, pp. 1817–1822, Jan. 2025",ratings:[],topics:["lowalt"]},
@@ -673,6 +676,7 @@ const venueAbbreviations = {
 };
 const monthOrder={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Sept:9,Oct:10,Nov:11,Dec:12};
 const publicationMonth=p=>{
+  if (p.sortMonth) return p.sortMonth;
   const match=(p.details||"").match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\b/);
   return match?(monthOrder[match[1]]||0):0;
 };
@@ -680,13 +684,14 @@ function renderPublications(){
   const matches=publications.filter(p=>(activeView==="timeline"||p.topics.includes(activeView))&&(activeAuthor==="all"||(activeAuthor==="first"?p.authors[0]==="Wen-Yu Dong":p.authors[0]!=="Wen-Yu Dong"))).sort((a,b)=>b.year-a.year||publicationMonth(b)-publicationMonth(a)||a.title.localeCompare(b.title));
   document.getElementById("result-count").textContent=`${matches.length} publication${matches.length===1?"":"s"}`;
   const kindFor=p=>p.publicationType||(p.venue==="arXiv preprint"?"preprint":p.venue.startsWith("IEEE International Conference")||p.venue.startsWith("IEEE Global Communications Conference")?"conference":"journal");
-  const paperMarkup=p=>{const abbreviation=venueAbbreviations[p.venue];const details=(p.details||"").replace(/^IEEE (?:TCOM|TMC|TVT|IoTJ|JSAC),\s*/,"");const tags=p.ratings.length?`<span class="venue-tags">${p.ratings.map(tag=>`<span class="venue-tag${tag==="IEEE ComSoc Flagship"?" flagship":""}">${escapeHtml(tag)}</span>`).join("")}</span>`:"";return `<li class="paper"><a class="paper-title" href="${escapeHtml(p.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a><div class="paper-meta">${p.authors.map(name=>name==="Wen-Yu Dong"?`<strong>${escapeHtml(name)}</strong>`:escapeHtml(name)).join(", ")}${p.authors.length>1?".":""}</div><div class="venue"><strong><em class="venue-name">${escapeHtml(p.venue)}</em></strong>${abbreviation?` (<strong><em>${escapeHtml(abbreviation)}</em></strong>)`:""}${details?(abbreviation?`, ${escapeHtml(details)}`:` · ${escapeHtml(details)}`):""}.${tags}</div></li>`};
+  const paperMarkup=p=>{const abbreviation=venueAbbreviations[p.venue];const details=(p.details||"").replace(/^IEEE (?:TCOM|TMC|TVT|IoTJ|JSAC),\s*/,"");const tags=p.ratings.length?`<span class="venue-tags">${p.ratings.map(tag=>`<span class="venue-tag${tag==="IEEE ComSoc Flagship"?" flagship":""}">${escapeHtml(tag)}</span>`).join("")}</span>`:"";return `<li class="paper">${p.href?`<a class="paper-title" href="${escapeHtml(p.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a>`:`<span class="paper-title paper-title-unlinked">${escapeHtml(p.title)}</span>`}<div class="paper-meta">${p.authors.map(name=>name==="Wen-Yu Dong"?`<strong>${escapeHtml(name)}</strong>`:escapeHtml(name)).join(", ")}${p.authors.length>1?".":""}</div><div class="venue"><strong><em class="venue-name">${escapeHtml(p.venue)}</em></strong>${abbreviation?` (<strong><em>${escapeHtml(abbreviation)}</em></strong>)`:""}${details?(abbreviation?`, ${escapeHtml(details)}`:` · ${escapeHtml(details)}`):""}.${tags}</div></li>`};
   const yearBlock=year=>{
     const papers=matches.filter(p=>p.year===year);
     const journals=papers.filter(p=>kindFor(p)==="journal");
     const conferences=papers.filter(p=>kindFor(p)==="conference");
+    const preprints=papers.filter(p=>kindFor(p)==="preprint");
     const section=(label,items)=>items.length?`<h4 class="publication-kind">${label}</h4><ul class="paper-list">${items.map(paperMarkup).join("")}</ul>`:"";
-    return `<h3 class="publication-year">${year}</h3>${section("Journals",journals)}${section("Conferences",conferences)}`;
+    return `<h3 class="publication-year">${year}</h3>${section("Journals",journals)}${section("Conferences",conferences)}${section("Preprints",preprints)}`;
   };
   const years=[...new Set(matches.map(p=>p.year))].sort((a,b)=>b-a);
   document.getElementById("publication-list").innerHTML=matches.length?years.map(yearBlock).join(""):`<p class="no-results">No publications match these filters.</p>`;
